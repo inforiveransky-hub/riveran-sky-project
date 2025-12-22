@@ -47,6 +47,7 @@ const Home = () => {
               <button className="primary-button">Book A Room</button>
             </div>
           </div>
+
           <button
             ref={nextRef}
             className="absolute z-40 top-1/2 right-6 -translate-y-1/2
