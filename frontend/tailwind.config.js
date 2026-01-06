@@ -27,6 +27,15 @@ export default {
       animation: {
         "spin-slow": "spin 10s linear infinite",
       },
+      keyframes: {
+        slowBounce: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
+      },
+      animation: {
+        "bounce-slow": "slowBounce 1s ease-in-out infinite",
+      },
     },
   },
   plugins: [],

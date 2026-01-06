@@ -39,7 +39,7 @@ import AOSWrapper from "../../common/AOSWrapper";
 
 const WhyChooseUs = () => {
   return (
-    <section className="why-choose-us relative bg-fixed bg-center bg-cover">
+    <section className="why-choose-us relative bg-fixed bg-center bg-cover" >
       <div className="absolute inset-0 bg-black/40" />
       <div className="container mx-auto px-5 md:px-10lg:px-20 py-10 flex items-center flex-col lg:flex-row">
         <div className="relative flex flex-col gap-3">
@@ -52,7 +52,7 @@ const WhyChooseUs = () => {
             peaceful escape from the city.
           </p>
           <p className="text-gray-50 font-body text-base md:text-lg leading-relaxed">
-            Spacious, well‑appointed rooms, lush lawns, and a riverside setting
+            Spacious, well-appointed rooms, lush lawns, and a riverside setting
             make it perfect for family vacations, romantic getaways, destination
             weddings, and corporate retreats.
           </p>

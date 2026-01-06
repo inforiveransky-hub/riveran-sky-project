@@ -2,23 +2,34 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import aboutImgOne from "../../assets/landingPage/about-one.webp";
 import aboutImgTwo from "../../assets/landingPage/about-two.webp";
+
+const colors = {
+  primary: {
+    DEFAULT: "#DD3333",
+    50: "#FBE9E9",
+    100: "#F8D3D3",
+    200: "#F0A8A8",
+    300: "#E97C7C",
+    400: "#E25050",
+    600: "#AF1D1D",
+    700: "#831616",
+    800: "#570F0F",
+    900: "#2C0707",
+    950: "#160404",
+  },
+  dark: "#1B1B1B",
+};
 const HomeAbout = () => {
-  const sectionRef = useRef(null);
-  const [cursorActive, setCursorActive] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setCursorActive(entry.isIntersecting),
-      { threshold: 0.4 }
-    );
-
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
   return (
-    <div className="bg-[#f7f3ef]">
+    <div
+      // className="bg-[#f7f3ef]"
+      style={{
+        background: `radial-gradient(circle at top left, ${colors.primary[50]}, #ffffff 40%, ${colors.primary[100]} 80%)`,
+        color: "#111827",
+      }}
+    >
       <section
-        ref={sectionRef}
+        // ref={sectionRef}
         className="container mx-auto px-5 md:px-10 lg:px-20 py-10 lg:py-20"
       >
         <div className="flex flex-col md:flex-row items-center gap-5 md:gap-12 justify-center">
@@ -47,7 +58,10 @@ const HomeAbout = () => {
               a Rejuvenating Staycation. Our Resort is a haven for those seeking
               a serene escape from the hustle and bustle of everyday life.
             </p>
-            <Link className="text-sm text-primary font-body font-semibold">
+            <Link
+              className="text-sm text-primary font-body font-semibold"
+              to={"./about-us"}
+            >
               More About Us
             </Link>
           </div>

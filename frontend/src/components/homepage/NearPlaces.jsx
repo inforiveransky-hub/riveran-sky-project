@@ -4,9 +4,30 @@ import { Link } from "react-router-dom";
 import { TbLocation } from "react-icons/tb";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import AOSWrapper from "../../common/AOSWrapper";
+const colors = {
+  primary: {
+    DEFAULT: "#DD3333",
+    50: "#FBE9E9",
+    100: "#F8D3D3",
+    200: "#F0A8A8",
+    300: "#E97C7C",
+    400: "#E25050",
+    600: "#AF1D1D",
+    700: "#831616",
+    800: "#570F0F",
+    900: "#2C0707",
+    950: "#160404",
+  },
+  dark: "#1B1B1B",
+};
 const NearPlaces = () => {
   return (
-    <div>
+    <div
+      style={{
+        background: `radial-gradient(circle at top left, ${colors.primary[50]}, #ffffff 40%, ${colors.primary[100]} 80%)`,
+        color: "#111827",
+      }}
+    >
       <div className="container mx-auto px-5 md:px-10 lg:px-20 py-10 lg:py-20 flex flex-col gap-6">
         <div className="w-full flex flex-col gap-3 sm:justify-center sm:items-center">
           <h1 className="text-3xl md:text-4xl font-heading font-semibold text-dark">

@@ -8,6 +8,7 @@ import ScrollToTop from "./common/ScrollToTop";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Testimonial from "./pages/Testimonial";
+import CommonContact from "./pages/CommonContact";
 
 const App = () => {
   useEffect(() => {
@@ -31,7 +32,9 @@ const App = () => {
           duration: 3000,
         }}
       />
+
       <Testimonial />
+      <CommonContact />
       <Footer />
     </div>
   );

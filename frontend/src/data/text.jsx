@@ -1,8 +1,8 @@
-import bedOne from "../assets/landingPage/bed-0ne.webp";
-import bedTwo from "../assets/landingPage/bed-two.webp";
-import bedthree from "../assets/landingPage/bed-1.webp";
-import bedfour from "../assets/landingPage/bed-2.webp";
-import bedfive from "../assets/landingPage/bed-3.webp";
+import bedOne from "../assets/landingPage/bed/bed-1.webp";
+import bedTwo from "../assets/landingPage/bed/bed-2.webp";
+import bedthree from "../assets/landingPage/bed/bed-3.webp";
+import bedfour from "../assets/landingPage/bed/bed-4.webp";
+import bedfive from "../assets/landingPage/bed/bed-5.webp";
 import { IoWifi } from "react-icons/io5";
 import { MdOutlineRoomService } from "react-icons/md";
 import { LiaSwimmingPoolSolid } from "react-icons/lia";
@@ -29,6 +29,9 @@ import place_13 from "../assets/airport.webp";
 import place from "../assets/landingPage/Prime-Location.webp";
 import ervice from "../assets/landingPage/Exceptional-ervice.webp";
 import team from "../assets/landingPage/Tailored-Experiences.webp";
+import servicesOne from "../assets/landingPage/servivces.webp";
+import servicesTwo from "../assets/landingPage/servivces.webp";
+import servicesThree from "../assets/landingPage/servivces.webp";
 export const headerText = [
   { path: "/", name: "Home" },
   {
@@ -38,6 +41,9 @@ export const headerText = [
       { path: "/about-us", name: "About Us" },
       { path: "/gallery", name: "Gallery" },
       { path: "/amenities", name: "Amenities" },
+      { path: "/rooms", name: "Rooms" },
+      // { path: "/custome-pricing", name: "Custome Pricing" },
+      { path: "/ourFacilify", name: "Our Facilities" },
     ],
   },
 
@@ -47,28 +53,28 @@ export const headerText = [
 export const rooms = [
   {
     title: "Cozy Room",
-    price: "$132.0 / Night",
-    image: bedfive,
+    price: "15000 / Night",
+    image: bedOne,
   },
   {
     title: "Modern Room",
-    price: "$132.0 / Night",
+    price: "9000 / Night",
     image: bedTwo,
   },
   {
-    title: "Deluxe Room",
-    price: "$132.0 / Night",
+    title: "Family Suite",
+    price: "15000 / Night",
     image: bedthree,
   },
   {
-    title: "Family Suite",
-    price: "$132.0 / Night",
+    title: "Deluxe Room",
+    price: "8000 / Night",
     image: bedfour,
   },
   {
     title: "Grand Luxury Room",
-    price: "$132.0 / Night",
-    image: bedOne,
+    price: "10000 / Night",
+    image: bedfive,
   },
 ];
 export const servicesSection = [
@@ -284,5 +290,75 @@ export const whyChooseUsData = [
     img: team,
     title: "Tailored Experiences",
     desc: "We offer personalized services and experiences that cater to your specific needs and preferences.",
+  },
+];
+export const faqs = [
+  {
+    question: "How can I make bookings?",
+    answer:
+      "You can easily make bookings through our website, by calling our reception desk, or by contacting us via email. Our team will assist you throughout the process.",
+  },
+  {
+    question: "What is the check-in and check-out policy?",
+    answer:
+      "Check-in time is from 2:00 PM and check-out time is until 11:00 AM. Early check-in and late check-out are subject to availability.",
+  },
+  {
+    question: "Do you have a cancellation policy?",
+    answer:
+      "Yes, cancellations made 48 hours prior to check-in are fully refundable. Late cancellations may incur charges.",
+  },
+];
+export const sectionOne = [
+  {
+    img: servicesTwo,
+    heading: "BEST FOOD",
+    title: "The Restaurant",
+    para: "Well-trained restaurant staff collaborate harmoniously to  orchestrate these elements, culminating in a memorable  and satisfying dining venture.",
+  },
+  {
+    img: servicesOne,
+    heading: "RELAXATION",
+    title: "Spa Center",
+    para: "Spa centers are designed to create a serene and soothing atmosphere. They often have calming decor, soft lighting, tranquil music, and aromatic scents to enhance relaxation.",
+  },
+  {
+    img: servicesThree,
+    heading: "HEALTH",
+    title: "Fitness Center",
+    para: "Fitness centers often have personal trainers available for one-on-one sessions. These trainers provide customized workout plans",
+  },
+];
+export const ourFacility = [
+  {
+    icon: "",
+    title: "High Speed Wifi",
+    disc: "",
+  },
+  {
+    icon: "",
+    title: "Pick & Drop Facility",
+    disc: "",
+  },
+  {
+    icon: "Room Service",
+    title: "",
+    disc: "",
+  },
+  {
+    icon: "",
+    title: "Swimming Pool",
+    disc: "",
+  },
+  {
+    icon: "",
+    title: "Breakfast Included",
+    disc: "",
+  },
+
+  {
+    icon: "",
+    title: "Shower Bathtub",
+    disc: "",
   },
 ];
