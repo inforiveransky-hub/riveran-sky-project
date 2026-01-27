@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 html {
@@ -31,8 +31,6 @@ html {
   --primary-800: #570F0F;
   --primary-900: #2C0707;
   --primary-950: #160404;
-
-
   --heading-font: 'Playfair Display', serif;
   --body-font: 'Barlow', sans-serif;
   --bg-dark: #1B1B1B;
