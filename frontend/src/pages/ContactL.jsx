@@ -1,64 +1,71 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import SEO from "../common/SEO";
 import { seoData } from "../data/text";
 
 const ContactL = () => {
-  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    // Load jQuery
+    const jquery = document.createElement("script");
+    jquery.src =
+      "https://www.eglobe-solutions.com/mailer/EglobeCalender/jquery-1.9.1.js";
+    jquery.async = true;
 
-  const [formData, setFormData] = useState({
-    yourName: "",
-    yourEmail: "",
-    phone: "",
-    // subject: "",
-    message: "",
-  });
-  const handleFormChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+    // Load jQuery UI
+    const jqueryUI = document.createElement("script");
+    jqueryUI.src =
+      "https://www.eglobe-solutions.com/mailer/EglobeCalender/jquery-ui.js";
+    jqueryUI.async = true;
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+    document.body.appendChild(jquery);
+    document.body.appendChild(jqueryUI);
 
-    try {
-      const response = await fetch("http://localhost:8000/api/book-a-room", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+    // Initialize datepicker after scripts load
+    jqueryUI.onload = () => {
+      window.$("#checkin").datepicker({
+        defaultDate: "+0d",
+        numberOfMonths: 1,
+        minDate: 0,
+        dateFormat: "dd-M-yy",
+        onClose: function (selectedDate) {
+          window.$("#checkout").datepicker("option", "minDate", selectedDate);
         },
-        body: JSON.stringify({
-          name: formData.yourName,
-          email: formData.yourEmail,
-          phone: formData.phone,
-          message: formData.message,
-        }),
       });
 
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || "Failed to send");
-      }
-
-      alert("Message sent successfully!");
-
-      setFormData({
-        yourName: "",
-        yourEmail: "",
-        phone: "",
-        // subject: "",
-        message: "",
+      window.$("#checkout").datepicker({
+        dateFormat: "dd-M-yy",
+        onClose: function (selectedDate) {
+          window.$("#checkin").datepicker("option", "maxDate", selectedDate);
+        },
       });
-    } catch (error) {
-      console.error("Contact form error:", error);
-      alert(error.message || "Failed to send message");
-    } finally {
-      setLoading(false);
+    };
+
+    return () => {
+      document.body.removeChild(jquery);
+      document.body.removeChild(jqueryUI);
+    };
+  }, []);
+
+  // Date validation (same logic eGlobe gave)
+  const isValidDate = () => {
+    const indt = document.getElementById("checkin").value;
+    const outdt = document.getElementById("checkout").value;
+
+    if (!indt || !outdt) {
+      alert("Please select Check-In and Check-Out dates");
+      return false;
     }
+
+    const checkInDate = new Date(indt);
+    const checkOutDate = new Date(outdt);
+
+    const diffTime = checkOutDate - checkInDate;
+    let diffDays = Math.ceil(diffTime / (1000 * 3600 * 24));
+
+    if (diffDays <= 0) diffDays = 1;
+
+    document.getElementById("numNightsParam").value = diffDays;
+    return true;
   };
 
   return (
@@ -164,97 +171,45 @@ const ContactL = () => {
                   Get In Touch
                 </h2>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Name and Email Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2 font-body">
-                        Your Name *
-                      </label>
-                      <input
-                        type="text"
-                        name="yourName"
-                        value={formData.yourName}
-                        onChange={handleFormChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all font-body"
-                        placeholder="Enter your name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2 font-body">
-                        Your Phone *
-                      </label>
-                      <input
-                        type="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleFormChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all font-body"
-                        placeholder="Enter your phone number"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2 font-body">
-                      Your Email *
-                    </label>
+                <form
+                  action="https://hotels.eglobe-solutions.com/riveranskyresorts/booking/hotels/river-an-sky-resort-nasik"
+                  method="post"
+                  name="frmHotelDetails"
+                  id="frmHotelDetails"
+                  target="_parent"
+                  autoComplete="off"
+                  onSubmit={isValidDate}
+                >
+                  <div className="grid grid-cols-2 gap-4 mb-6">
                     <input
-                      type="email"
-                      name="yourEmail"
-                      value={formData.yourEmail}
-                      onChange={handleFormChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all font-body"
-                      placeholder="Enter your email"
+                      type="text"
+                      id="checkin"
+                      name="checkIn"
+                      placeholder="Check In"
+                      className="border border-gray-300 px-4 py-3 rounded-lg w-full"
+                    />
+
+                    <input
+                      type="text"
+                      id="checkout"
+                      name="ch_out"
+                      placeholder="Check Out"
+                      className="border border-gray-300 px-4 py-3 rounded-lg w-full bg-white"
                     />
                   </div>
-                  {/* Subject */}
-                  {/* <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2 font-body">
-                    Subject *
-                  </label>
+
                   <input
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleFormChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all font-body"
-                    placeholder="Enter subject"
+                    type="hidden"
+                    name="nights"
+                    id="numNightsParam"
+                    value="1"
                   />
-                </div> */}
 
-                  {/* Message */}
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2 font-body">
-                      Message *
-                    </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleFormChange}
-                      required
-                      rows="5"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none font-body"
-                      placeholder="Enter your message"
-                    />
-                  </div>
-
-                  {/* Submit Button */}
                   <button
                     type="submit"
-                    disabled={loading}
-                    className={`w-full text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform font-body
-    ${
-      loading
-        ? "bg-gray-400 cursor-not-allowed"
-        : "bg-primary-600 hover:bg-primary hover:scale-[1.02] hover:shadow-lg"
-    }
-  `}
+                    className="w-full bg-primary text-white py-4 rounded-lg font-semibold hover:bg-primary/90 transition"
                   >
-                    {loading ? "Sending..." : "Send Message"}
+                    BOOK ONLINE
                   </button>
                 </form>
               </div>

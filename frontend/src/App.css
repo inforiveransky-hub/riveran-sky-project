@@ -109,3 +109,9 @@ html {
   background-size: cover;
   background-attachment: fixed;
 }
+
+
+.ui-datepicker {
+  z-index: 9999 !important;
+  background: #fff !important;
+}

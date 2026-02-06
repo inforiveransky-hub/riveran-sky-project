@@ -323,6 +323,31 @@ const CommonContact = () => {
     document.getElementById("numNightsParam").value = diffDays;
     return true;
   };
+  // const isValidDate = () => {
+  //   const indt = document.getElementById("checkin").value;
+  //   const outdt = document.getElementById("checkout").value;
+
+  //   if (!indt || !outdt) {
+  //     alert("Please select Check-In and Check-Out dates");
+  //     return false;
+  //   }
+
+  //   const inDate = window.$("#checkin").datepicker("getDate");
+  //   const outDate = window.$("#checkout").datepicker("getDate");
+
+  //   if (!inDate || !outDate) {
+  //     alert("Invalid date selection");
+  //     return false;
+  //   }
+
+  //   const diffTime = outDate.getTime() - inDate.getTime();
+  //   let diffDays = Math.ceil(diffTime / (1000 * 3600 * 24));
+
+  //   if (diffDays <= 0) diffDays = 1;
+
+  //   document.getElementById("numNightsParam").value = diffDays;
+  //   return true;
+  // };
 
   return (
     <section className="relative py-20 bg-dark">
@@ -361,7 +386,6 @@ const CommonContact = () => {
                   name="checkIn"
                   placeholder="Check In"
                   className="border border-gray-300 px-4 py-3 rounded-lg w-full"
-                  readOnly
                 />
 
                 <input
@@ -369,8 +393,7 @@ const CommonContact = () => {
                   id="checkout"
                   name="ch_out"
                   placeholder="Check Out"
-                  className="border border-gray-300 px-4 py-3 rounded-lg w-full"
-                  readOnly
+                  className="border border-gray-300 px-4 py-3 rounded-lg w-full bg-white"
                 />
               </div>
 

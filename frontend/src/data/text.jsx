@@ -160,19 +160,19 @@ export const servicesSection = [
 ];
 export const footerLinks = [
   {
-    url: "/",
+    url: "/about-us",
     name: "About Us",
   },
   {
-    url: "/",
+    url: "/rooms",
     name: "Hotel Room",
   },
   {
-    url: "/",
+    url: "/gallery",
     name: "Our Gallery",
   },
   {
-    url: "/",
+    url: "/contact",
     name: "Contact Us",
   },
 ];
