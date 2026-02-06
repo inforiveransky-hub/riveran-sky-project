@@ -52,8 +52,8 @@ import place from "../assets/landingPage/Prime-Location.webp";
 import ervice from "../assets/landingPage/Exceptional-ervice.webp";
 import team from "../assets/landingPage/Tailored-Experiences.webp";
 import servicesOne from "../assets/landingPage/servivces.webp";
-import servicesTwo from "../assets/landingPage/servivces.webp";
-import servicesThree from "../assets/landingPage/servivces.webp";
+import servicesTwo from "../assets/landingPage/hotel.png";
+// import servicesThree from "../assets/landingPage/servivces.webp";
 import swiming from "../assets/swiming-pool.webp";
 import green from "../assets/green.jpg";
 import Weddings from "../assets/why-choose-us-bg.webp";
@@ -61,9 +61,6 @@ import meeting from "../assets/bg-1.webp";
 import greenImg1 from "../assets/aboutPage/greenImg1.jpg";
 import greenImg2 from "../assets/aboutPage/greenImg2.jpg";
 import greenImg3 from "../assets/aboutPage/greenImg3.jpg";
-// import meeting from "../assets/bg-1.webp";
-// import meeting from "../assets/bg-1.webp";
-// import meeting from "../assets/bg-1.webp";
 
 export const headerText = [
   { path: "/", name: "Home" },
@@ -368,12 +365,12 @@ export const sectionOne = [
     title: "Spa Center",
     para: "Spa centers are designed to create a serene and soothing atmosphere. They often have calming decor, soft lighting, tranquil music, and aromatic scents to enhance relaxation.",
   },
-  {
-    img: servicesThree,
-    heading: "HEALTH",
-    title: "Fitness Center",
-    para: "Fitness centers often have personal trainers available for one-on-one sessions. These trainers provide customized workout plans",
-  },
+  // {
+  //   img: servicesThree,
+  //   heading: "HEALTH",
+  //   title: "Fitness Center",
+  //   para: "Fitness centers often have personal trainers available for one-on-one sessions. These trainers provide customized workout plans",
+  // },
 ];
 export const ourFacility = [
   {
