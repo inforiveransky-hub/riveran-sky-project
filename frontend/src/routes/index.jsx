@@ -12,11 +12,13 @@ import SwimmingPool from "../components/SwimmingPool";
 import Amenities from "../components/Amenities";
 import DestinationWeddings from "../components/DestinationWeddings";
 import CorporateMeetings from "../components/CorporateMeetings";
+import ErrorBoundary from "../common/ErrorBoundary";
 
 const router = createBrowserRouter([
   {
     path: "",
     element: <App />,
+    errorElement: <ErrorBoundary />,
     children: [
       {
         path: "/",
