@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import SEO from "../common/SEO";
 import { seoData } from "../data/text";
+import AOSWrapper from "../common/AOSWrapper";
 
 const ContactL = () => {
   useEffect(() => {
@@ -80,18 +81,29 @@ const ContactL = () => {
         ogUrl={seoData.contact.canonical}
       />
       <div>
-        {/* Hero Section */}
-        <section className="about-us relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80" />
-          <div className="w-full h-full flex flex-col items-center justify-center relative z-10 px-4">
-            <h1 className="text-5xl lg:text-7xl font-heading font-semibold text-white text-center mb-4 animate-fade-in">
-              Get In Touch
-            </h1>
-            <p className="text-lg lg:text-xl text-white/90 text-center max-w-2xl font-body">
-              We're here to help and answer any question you might have
-            </p>
+        <div className="about-us">
+          <div className="absolute bg-black/70 w-full h-[70vh]" />
+          {/* <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-dark z-10" /> */}
+          <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
+            <img
+              src="/path-to-amenities-hero.jpg"
+              alt="Amenities"
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 z-20 flex items-center justify-center text-center px-4">
+              <AOSWrapper animation="zoom-in" duration={1200}>
+                <h1 className="text-5xl md:text-7xl font-heading text-white mb-4 tracking-wide">
+                  Get In Touch
+                </h1>
+                <div className="w-24 h-1 bg-primary mx-auto mb-6" />
+                <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light">
+                  We're here to help and answer any question you might have
+                </p>
+              </AOSWrapper>
+            </div>
           </div>
-        </section>
+        </div>
 
         {/* Contact Form & Info Section */}
         <section className="bg-gray-50 py-16 lg:py-20">

@@ -736,132 +736,182 @@ export const whyChooseUs = [
 ];
 export const seoData = {
   home: {
-    title:
-      "RiverAnSky Luxury Resorts Nashik | Best Resort in Nashik, Maharashtra",
+    title: "RiverAnSky Luxury Resorts Nashik | Best Resort in Nashik",
     description:
-      "Experience luxury at RiverAnSky Resorts in Nashik. Premium rooms, swimming pool, sapphire lawn for weddings, corporate meetings & events. Book your stay at the best luxury resort in Nashik, Maharashtra.",
+      "RiverAnSky Luxury Resorts in Nashik offers premium rooms, a crystal-clear swimming pool, Sapphire Lawn for weddings, and state-of-the-art conference halls. Book your dream stay or event in Nashik, Maharashtra.",
     keywords:
-      "luxury resort nashik, best resort in nashik, riveransky resorts, nashik resorts, wedding venues nashik, corporate events nashik, destination wedding nashik, luxury hotels nashik, resorts near nashik, weekend getaway nashik",
+      "luxury resort nashik, best resort in nashik, riveransky resorts nashik, nashik luxury hotel, weekend getaway nashik pune, resort near nashik, 5 star resort nashik, family resort nashik, riveransky resort booking, top resort maharashtra, best resort near pune nashik highway, resort with swimming pool nashik",
     ogImage: "/images/og/home-og.jpg",
     canonical: "https://riveranskyresorts.com/",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Resort",
+      name: "RiverAnSky Luxury Resorts",
+      url: "https://riveranskyresorts.com",
+      telephone: "+919325117757",
+      email: "booking@riveranskyresorts.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Rajur Bahula",
+        addressLocality: "Nashik",
+        addressRegion: "Maharashtra",
+        addressCountry: "IN",
+      },
+      image: "https://riveranskyresorts.com/images/og/home-og.jpg",
+      priceRange: "₹₹₹",
+      amenityFeature: [
+        {
+          "@type": "LocationFeatureSpecification",
+          name: "Swimming Pool",
+          value: true,
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          name: "Conference Hall",
+          value: true,
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          name: "Wedding Venue",
+          value: true,
+        },
+        { "@type": "LocationFeatureSpecification", name: "Spa", value: true },
+        {
+          "@type": "LocationFeatureSpecification",
+          name: "Free WiFi",
+          value: true,
+        },
+      ],
+    },
   },
 
   about: {
-    title:
-      "About RiverAnSky Luxury Resorts | Premium Resort in Nashik, Maharashtra",
+    title: "About RiverAnSky Resorts Nashik | Luxury Resort Story & Vision",
     description:
-      "Discover RiverAnSky Luxury Resorts - a premier destination in Nashik offering world-class amenities, exceptional hospitality, and unforgettable experiences. Learn about our commitment to excellence and guest satisfaction.",
+      "RiverAnSky Resorts is Nashik's premier luxury destination blending natural beauty with world-class hospitality. Discover our story, our team, and our commitment to creating unforgettable experiences for every guest.",
     keywords:
-      "about riveransky resorts, luxury resort nashik, best resort nashik maharashtra, nashik resort facilities, premium hospitality nashik, resort story nashik, luxury accommodation nashik",
+      "about riveransky resorts nashik, luxury resort nashik story, best resort nashik maharashtra, premium hospitality nashik, riveransky resort history, resort team nashik, who owns riveransky nashik, luxury resort vision nashik, 5 star resort nashik about, riveransky resort founders",
     ogImage: "/images/og/about-og.jpg",
     canonical: "https://riveranskyresorts.com/about-us",
   },
 
   services: {
-    title:
-      "Our Services | RiverAnSky Luxury Resorts - Wedding, Events & Hospitality",
+    title: "Services | Weddings, Corporate Events & Stays – RiverAnSky Nashik",
     description:
-      "Explore premium services at RiverAnSky Resorts Nashik including destination weddings, corporate events, luxury accommodation, fine dining, spa services, and recreational activities. Professional event planning and management.",
+      "From dream destination weddings and corporate retreats to luxury staycations and private celebrations — RiverAnSky Resorts Nashik delivers end-to-end event management, fine dining, and personalized hospitality.",
     keywords:
-      "resort services nashik, wedding services nashik, corporate event services, luxury accommodation services, event planning nashik, catering services nashik, spa services nashik, resort amenities nashik",
+      "resort services nashik, destination wedding planning nashik, corporate event management nashik, luxury stay nashik, catering services resort nashik, event decoration nashik resort, private party venue nashik, birthday celebration resort nashik, anniversary venue nashik, pre-wedding shoot resort nashik",
     ogImage: "/images/og/services-og.jpg",
     canonical: "https://riveranskyresorts.com/services",
   },
 
   amenities: {
     title:
-      "Resort Amenities | Swimming Pool, Lawn, Meeting Halls - RiverAnSky Nashik",
+      "Amenities | Pool, Lawn, Conference Hall – RiverAnSky Resorts Nashik",
     description:
-      "Discover world-class amenities at RiverAnSky Resorts: Sapphire Lawn for events, crystal-clear swimming pool, modern conference halls, and premium facilities for weddings, corporate meetings, and leisure in Nashik.",
+      "Explore RiverAnSky Resort's world-class amenities in Nashik: Sapphire Lawn for outdoor events, a crystal-clear swimming pool, modern AV-equipped conference halls, spa, gym, and more — all under one roof.",
     keywords:
-      "resort amenities nashik, swimming pool resort nashik, event lawn nashik, conference hall nashik, wedding venue amenities, corporate meeting facilities nashik, luxury resort facilities",
+      "resort amenities nashik, swimming pool resort nashik, sapphire lawn nashik, conference hall resort nashik, wedding lawn nashik, gym resort nashik, spa resort nashik, kids play area resort nashik, outdoor event venue nashik, resort facilities nashik maharashtra",
     ogImage: "/images/og/amenities-og.jpg",
     canonical: "https://riveranskyresorts.com/amenities",
   },
 
   sapphireLawn: {
-    title:
-      "Sapphire Lawn | Outdoor Wedding & Event Venue - RiverAnSky Resorts Nashik",
+    title: "Sapphire Lawn Nashik | Best Outdoor Wedding & Event Venue",
     description:
-      "Host unforgettable events at our expansive Sapphire Lawn in Nashik. Perfect for weddings, corporate events, and celebrations with beautiful surroundings, professional event support, and customizable setups.",
+      "Sapphire Lawn at RiverAnSky Resorts is Nashik's most sought-after outdoor venue for weddings, receptions, and corporate events. Lush greenery, customizable setups, and dedicated event managers make every occasion extraordinary.",
     keywords:
-      "sapphire lawn nashik, outdoor wedding venue nashik, event lawn nashik, wedding lawn nashik, corporate event lawn, outdoor venue nashik, garden wedding nashik, lawn booking nashik",
+      "sapphire lawn nashik, outdoor wedding venue nashik, best lawn for wedding nashik, garden wedding venue nashik, outdoor event space nashik, lawn booking nashik resort, wedding reception lawn nashik, budget wedding lawn nashik, green lawn venue nashik, open air wedding venue maharashtra",
     ogImage: "/images/og/sapphire-lawn-og.jpg",
     canonical: "https://riveranskyresorts.com/amenities/sapphire-lawn",
   },
 
   swimmingPool: {
-    title:
-      "Swimming Pool | Premium Pool Facilities - RiverAnSky Luxury Resorts Nashik",
+    title: "Swimming Pool Resort Nashik | Luxury Pool – RiverAnSky Resorts",
     description:
-      "Dive into luxury at RiverAnSky's premium swimming pool in Nashik. Crystal-clear waters, poolside cabanas, kids splash zone, and professional lifeguards. Perfect for family fun and relaxation.",
+      "Take a dip in RiverAnSky's premium swimming pool in Nashik — featuring crystal-clear waters, kids' splash zone, poolside loungers, and professional lifeguards. Ideal for family vacations and relaxing weekend getaways.",
     keywords:
-      "swimming pool nashik, resort pool nashik, luxury pool facilities, family pool nashik, poolside resort nashik, swimming facilities nashik, pool resort maharashtra",
+      "swimming pool resort nashik, resort with pool nashik, luxury pool nashik, family pool resort nashik, kids pool nashik resort, poolside resort nashik, best pool resort near pune, weekend resort with pool nashik, swimming facilities nashik, resort pool maharashtra",
     ogImage: "/images/og/swimming-pool-og.jpg",
     canonical: "https://riveranskyresorts.com/amenities/swimming-pool",
   },
 
   destinationWeddings: {
-    title:
-      "Destination Weddings in Nashik | RiverAnSky - Premier Wedding Venue",
+    title: "Destination Wedding in Nashik | Best Wedding Venue – RiverAnSky",
     description:
-      "Plan your dream destination wedding at RiverAnSky Resorts Nashik. Stunning venues, expert planning, customized packages, professional photography, catering, and décor. Create magical memories in Maharashtra's finest wedding destination.",
+      "Plan the wedding of your dreams at RiverAnSky Resorts, Nashik's finest destination wedding venue. Expert planners, stunning decor, gourmet catering, customized packages, and breathtaking outdoor settings in Maharashtra.",
     keywords:
-      "destination wedding nashik, wedding venue nashik, marriage hall nashik, wedding resort nashik, wedding packages nashik, outdoor wedding nashik, luxury wedding venue maharashtra, wedding planning nashik",
+      "destination wedding nashik, best wedding venue nashik, wedding resort nashik, luxury wedding nashik, marriage hall nashik, wedding packages nashik price, outdoor wedding nashik, wedding planner nashik, sangeet venue nashik, mehndi ceremony venue nashik, wedding photography location nashik, wedding hall booking nashik",
     ogImage: "/images/og/destination-wedding-og.jpg",
     canonical: "https://riveranskyresorts.com/amenities/destination-weddings",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "EventVenue",
+      name: "RiverAnSky Resorts – Destination Wedding Venue Nashik",
+      url: "https://riveranskyresorts.com/amenities/destination-weddings",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Nashik",
+        addressRegion: "Maharashtra",
+        addressCountry: "IN",
+      },
+      maximumAttendeeCapacity: 1000,
+    },
   },
 
   corporateMeetings: {
-    title:
-      "Corporate Meetings & Events | Conference Hall - RiverAnSky Resorts Nashik",
+    title: "Corporate Events & Conference Hall Nashik | RiverAnSky Resorts",
     description:
-      "Host successful corporate events at RiverAnSky Nashik. State-of-the-art conference halls, modern AV equipment, high-speed WiFi, professional event support, and team building activities. Perfect for meetings, seminars & conferences.",
+      "RiverAnSky Nashik offers premium corporate event facilities: modern conference halls with HD AV systems, high-speed WiFi, team-building activities, business lunches, and dedicated corporate packages for meetings and seminars.",
     keywords:
-      "corporate meetings nashik, conference hall nashik, corporate events nashik, business meeting venue, seminar hall nashik, corporate retreat nashik, training venue nashik, business conference nashik",
+      "corporate meeting venue nashik, conference hall nashik, business meeting resort nashik, corporate retreat nashik, seminar hall nashik, team outing resort nashik, corporate day out nashik, offsite meeting venue nashik, training room nashik, business conference resort maharashtra, company event venue nashik",
     ogImage: "/images/og/corporate-og.jpg",
     canonical: "https://riveranskyresorts.com/amenities/corporate-meetings",
   },
 
   rooms: {
-    title:
-      "Luxury Rooms & Suites | Premium Accommodation - RiverAnSky Resorts Nashik",
+    title: "Luxury Rooms & Suites in Nashik | Book Now – RiverAnSky Resorts",
     description:
-      "Experience luxury accommodation at RiverAnSky Resorts Nashik. Elegant rooms and suites with modern amenities, stunning views, comfortable beds, and premium facilities. Book your perfect stay in Nashik, Maharashtra.",
+      "Stay in elegance at RiverAnSky Resorts, Nashik. Choose from deluxe rooms, premium suites, and family rooms with modern amenities, plush bedding, scenic views, and 24/7 room service. Best rates guaranteed.",
     keywords:
-      "luxury rooms nashik, resort rooms nashik, hotel accommodation nashik, premium suites nashik, deluxe rooms nashik, resort booking nashik, best rooms nashik, luxury accommodation maharashtra",
+      "luxury rooms nashik, resort rooms booking nashik, deluxe room nashik resort, suite nashik resort, family room nashik resort, best hotel rooms nashik, comfortable stay nashik, room with view nashik, premium accommodation nashik, resort stay nashik price, nashik resort room rates, 5 star room nashik",
     ogImage: "/images/og/rooms-og.jpg",
     canonical: "https://riveranskyresorts.com/rooms",
   },
 
   facilities: {
-    title: "Resort Facilities | Dining, Spa & Recreation - RiverAnSky Nashik",
+    title: "Resort Facilities | Restaurant, Spa & Sports – RiverAnSky Nashik",
     description:
-      "Explore comprehensive facilities at RiverAnSky Resorts: Fine dining restaurant, spa & wellness center, recreational activities, indoor games, outdoor sports, gym, and 24/7 services for an unforgettable stay in Nashik.",
+      "RiverAnSky Nashik provides a full suite of facilities: multi-cuisine restaurant, spa & wellness centre, indoor games, outdoor sports, fitness gym, kids' play area, and round-the-clock concierge for a truly complete resort experience.",
     keywords:
-      "resort facilities nashik, dining facilities nashik, spa nashik, recreational activities nashik, resort amenities, wellness center nashik, restaurant nashik resort, sports facilities nashik",
+      "resort facilities nashik, restaurant in resort nashik, spa resort nashik, gym resort nashik, indoor games resort nashik, outdoor sports resort nashik, wellness centre nashik, kids area resort nashik, 24 hour service resort nashik, all facilities resort nashik, dining resort nashik",
     ogImage: "/images/og/facilities-og.jpg",
     canonical: "https://riveranskyresorts.com/ourFacility",
   },
 
   gallery: {
-    title: "Photo Gallery | RiverAnSky Luxury Resorts Nashik - Images & Videos",
+    title: "Gallery | Photos & Videos of RiverAnSky Luxury Resorts Nashik",
     description:
-      "Browse our photo gallery showcasing the beauty of RiverAnSky Resorts Nashik. View images of our rooms, amenities, events, weddings, swimming pool, lawns, and facilities. Visualize your perfect stay or event.",
+      "Explore the beauty of RiverAnSky Resorts through our photo and video gallery. View stunning images of rooms, Sapphire Lawn, swimming pool, wedding setups, events, and dining — and picture your perfect Nashik escape.",
     keywords:
-      "resort gallery nashik, riveransky photos, resort images nashik, wedding photos nashik, event gallery, resort pictures, nashik resort photos, luxury resort gallery",
+      "riveransky resort photos nashik, resort gallery nashik, wedding venue photos nashik, resort swimming pool photos, event hall photos nashik, luxury resort images nashik, resort room pictures nashik, before booking resort gallery, nashik resort video tour",
     ogImage: "/images/og/gallery-og.jpg",
     canonical: "https://riveranskyresorts.com/gallery",
   },
 
   contact: {
-    title:
-      "Contact Us | RiverAnSky Resorts Nashik - Bookings & Enquiries +91 9325117757",
+    title: "Contact RiverAnSky Resorts Nashik | Call +91 9325117757 to Book",
     description:
-      "Contact RiverAnSky Luxury Resorts for bookings and enquiries. Call +91 9325117757 or email booking@riveranskyresorts.com. Located in Rajur Bahula, Nashik, Maharashtra. Get directions, prices, and availability.",
+      "Reach out to RiverAnSky Luxury Resorts for bookings, event enquiries, and availability. Call +91 9325117757 or email booking@riveranskyresorts.com. Located at Rajur Bahula, Nashik, Maharashtra. We respond within hours.",
     keywords:
-      "contact riveransky resorts, nashik resort contact, resort booking nashik, enquiry nashik resort, riveransky phone number, resort address nashik, booking contact nashik",
+      "contact riveransky resorts nashik, resort booking number nashik, riveransky phone number, resort enquiry nashik, how to book riveransky nashik, resort address nashik, directions riveransky resort, riveransky email, nashik resort reservation, booking riveransky resort online",
     ogImage: "/images/og/contact-og.jpg",
     canonical: "https://riveranskyresorts.com/contact",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      name: "Contact RiverAnSky Resorts Nashik",
+      url: "https://riveranskyresorts.com/contact",
+    },
   },
 };

@@ -110,36 +110,6 @@ const SapphireLawn = () => {
             ))}
           </div>
         </div>
-
-        {/* Image Gallery Section */}
-        {/* <div className="container mx-auto px-5 md:px-10 py-16">
-        <AOSWrapper animation="fade-up">
-          <h2 className="text-4xl md:text-5xl font-heading text-white text-center mb-12">
-            Gallery
-          </h2>
-        </AOSWrapper>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[1, 2, 3, 4, 5, 6].map((item, index) => (
-            <AOSWrapper
-              key={index}
-              animation="zoom-in"
-              duration={800}
-              delay={index * 100}
-            >
-              <div className="relative h-64 rounded-2xl overflow-hidden group cursor-pointer">
-                <img
-                  src={`/path-to-gallery-image-${item}.jpg`}
-                  alt={`Sapphire Lawn ${item}`}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-            </AOSWrapper>
-          ))}
-        </div>
-      </div> */}
-
         {/* CTA Section */}
         <div className="container mx-auto px-5 md:px-10 py-20">
           <AOSWrapper animation="fade-up" duration={1000}>

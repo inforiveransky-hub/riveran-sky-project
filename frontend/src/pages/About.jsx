@@ -8,6 +8,7 @@ import AminityAbout from "../components/aboutpage/AminityAbout";
 import weOffer from "../assets/aboutPage/weOffer.webp";
 import { faqs, seoData } from "../data/text";
 import SEO from "../common/SEO";
+import AOSWrapper from "../common/AOSWrapper";
 gsap.registerPlugin(ScrollTrigger);
 const About = () => {
   const sectionRef = useRef(null);
@@ -68,17 +69,30 @@ const About = () => {
         ogUrl={seoData.about.canonical}
       />
       <div>
-        <section className="about-us">
-          <div className="absolute bg-black/50 w-full h-[70vh]" />
-          <div className="w-full h-full flex items-center justify-center relative">
-            <h1 className="text-5xl lg:text-7xl font-heading font-semibold text-white text-center">
-              {" "}
-              ABOUT RIVER
-              <span className="text-primary-600 font-normal">AN</span>
-              SKY
-            </h1>
+        <div className="about-us">
+          <div className="absolute bg-black/70 w-full h-[70vh]" />
+          {/* <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-dark z-10" /> */}
+          <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
+            <img
+              src="/path-to-amenities-hero.jpg"
+              alt="Amenities"
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 z-20 flex items-center justify-center text-center px-4">
+              <AOSWrapper animation="zoom-in" duration={1200}>
+                <h1 className="text-5xl md:text-7xl font-heading text-white mb-4 tracking-wide">
+                  ABOUT RIVERANSKY
+                </h1>
+                <div className="w-24 h-1 bg-primary mx-auto mb-6" />
+                <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light">
+                  Discover world-class facilities designed for your comfort and
+                  enjoyment
+                </p>
+              </AOSWrapper>
+            </div>
           </div>
-        </section>
+        </div>
         <section ref={sectionRef} className="bg-white">
           <div className="container mx-auto px-5 md:px-10 lg:px-20 py-14 lg:py-24">
             <div className="flex flex-col lg:flex-row items-center gap-14">

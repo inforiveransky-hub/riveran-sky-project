@@ -61,7 +61,8 @@ const router = createBrowserRouter([
         element: <Rooms />,
       },
       {
-        path: "/ourFacilify",
+        // ✅ Fixed typo: was "/ourFacilify" — this was causing a 404 and broken sitemap link
+        path: "/ourFacility",
         element: <OurFacility />,
       },
       { path: "/contact", element: <ContactL /> },

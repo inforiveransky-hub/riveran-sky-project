@@ -94,7 +94,7 @@ html {
   width: 100%;
   height: 70vh;
   background-image: url("./assets/aboutPage/aboutbg.webp");
-  background-position: center top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
