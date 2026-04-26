@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 import Testimonial from "./pages/Testimonial";
 import CommonContact from "./pages/CommonContact";
 import SchemaMarkup from "./common/SchemaMarkup";
+import VideoSection from "./pages/VideoSection";
 
 const App = () => {
   useEffect(() => {
@@ -37,7 +38,7 @@ const App = () => {
           duration: 3000,
         }}
       />
-
+      <VideoSection />
       <Testimonial />
       <CommonContact />
       <Footer />

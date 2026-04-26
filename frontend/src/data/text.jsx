@@ -34,7 +34,7 @@ import {
 import { LiaSwimmingPoolSolid } from "react-icons/lia";
 import { PiBathtub } from "react-icons/pi";
 import { AiOutlineCar } from "react-icons/ai";
-import Testi from "../assets/1743399665832.jpeg";
+// import Testi from "../assets/1743399665832.jpeg";
 import place_1 from "../assets/bhandardara.webp";
 import place_2 from "../assets/jain-temple.webp";
 import place_3 from "../assets/pandav-leni.webp";
@@ -61,7 +61,7 @@ import meeting from "../assets/bg-1.webp";
 import greenImg1 from "../assets/aboutPage/greenImg1.jpg";
 import greenImg2 from "../assets/aboutPage/greenImg2.jpg";
 import greenImg3 from "../assets/aboutPage/greenImg3.jpg";
-
+import Testi from "../assets/review_icons.png";
 export const headerText = [
   { path: "/", name: "Home" },
   {
@@ -86,7 +86,7 @@ export const headerText = [
 
       { path: "/rooms", name: "Rooms" },
       // { path: "/custome-pricing", name: "Custome Pricing" },
-      { path: "/ourFacilify", name: "Our Facilities" },
+      { path: "/ourFacility", name: "Our Facilities" },
     ],
   },
 
@@ -202,27 +202,27 @@ export const socialMedia = [
 export const testimonials = [
   {
     img: Testi,
-    dsc: "I also had the pleasure of dining at the hotel's restaurant, and the culinary experience was nothing short of extraordinary. The flavors, the presentation, and the ambiance all contributed to an unforgettable dining experience that I'll treasure.",
-    name: "Pratik Dhere",
-    positions: "CEO & Founder",
+    dsc: "We recently celebrated a birthday at River & Sky Resort dated on 11th April 2026, and it turned out to be an absolutely wonderful experience! From the moment we arrived, the ambiance was beautiful and refreshing, creating the perfect setting for a special celebration. The event arrangements were very well organized, and every detail was handled with care and professionalism.",
+    name: "Lalita Patil",
+    positions: " ",
   },
   {
     img: Testi,
-    dsc: "I also had the pleasure of dining at the hotel's restaurant, and the culinary experience was nothing short of extraordinary. The flavors, the presentation, and the ambiance all contributed to an unforgettable dining experience that I'll treasure.",
-    name: "Satosh Dhere",
-    positions: "CEO & Founder",
+    dsc: "Family We had a wonderful stay with exceptional service and spotless rooms. The staff was incredibly friendly and made us feel right at home. The location was perfect, and the views were absolutely stunning. Everything from check-in to check-out was smooth and professional. food quality best",
+    name: "ganesh berad",
+    positions: " ",
   },
   {
     img: Testi,
-    dsc: "I also had the pleasure of dining at the hotel's restaurant, and the culinary experience was nothing short of extraordinary. The flavors, the presentation, and the ambiance all contributed to an unforgettable dining experience that I'll treasure.",
-    name: "Pratik Dhere",
-    positions: "CEO & Founder",
+    dsc: "The restaurant offers a pleasant dining experience with a good balance of food quality, ambiance, and service. The menu has a decent variety, catering to different tastes, and the dishes are generally well-prepared and flavorful. Presentation is appealing, and portion sizes are satisfying.",
+    name: "Abhay Mandal",
+    positions: " ",
   },
   {
     img: Testi,
-    dsc: "I also had the pleasure of dining at the hotel's restaurant, and the culinary experience was nothing short of extraordinary. The flavors, the presentation, and the ambiance all contributed to an unforgettable dining experience that I'll treasure.",
-    name: "Santosh Dhere",
-    positions: "CEO & Founder",
+    dsc: "Excellent service, rooms and meals are very good. Staff is polite and helpful. Special shoutout to Deepak Kumar for giving us very good service and for being extremely professional and helpful. We enjoyed our stay. Will come again.",
+    name: "Darrell Fernandes",
+    positions: " ",
   },
 ];
 export const nearPlaces = [
